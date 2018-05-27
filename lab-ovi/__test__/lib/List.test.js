@@ -66,7 +66,7 @@ describe('Test for the List methods', () => {
   });
 
   it('Test the Map() with an invalid callback ', () => {
-     expect(() => {list.map();}).toThrow('Callback Required');
+    expect(() => {list.map();}).toThrow('Callback Required');
   });
 
   it('Test that the Map() has a length of 5 after Pushing 5 new elements', () => {
