@@ -14,7 +14,6 @@ class List {
   // Pop
   pop() {
     if (this.length > 0) {
-      var element = this[this.length-1];
       delete this[this.length-1];
       this.length--;
     }
@@ -44,17 +43,17 @@ class List {
   }
 
   // Reduce
-  reduce(fn, sum) {
+  reduce(callback, sum) {
     var i = 0;
     if (typeof sum === 'undefined') {
-        i = 1;
-        sum = this[0];
+      i = 1;
+      sum = this[0];
     }
     for (i; i < this.length; i++) {
-        if (typeof this[i] !== 'number') {
-            return undefined;
-        }
-        sum = fn(sum, this[i], i);
+      if (typeof this[i] !== 'number') {
+        return undefined;
+      }
+      sum = callback(sum, this[i], i);
     }
     return sum;
   }
