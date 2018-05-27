@@ -1,6 +1,6 @@
 'use strict';
 
-const List = require('./lab-ovi/lib/List.js');
+const List = require('./lib/List.js');
 
 let list = new List();
 
