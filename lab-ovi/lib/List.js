@@ -43,7 +43,7 @@ class List {
   }
 
   // Reduce
-  reduce(fn, sum) {
+  reduce(callback, sum) {
     var i = 0;
     if (typeof sum === 'undefined') {
       i = 1;
@@ -53,7 +53,7 @@ class List {
       if (typeof this[i] !== 'number') {
         return undefined;
       }
-      sum = fn(sum, this[i], i);
+      sum = callback(sum, this[i], i);
     }
     return sum;
   }

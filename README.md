@@ -47,3 +47,12 @@ Each `it` callback should aim to test a small, well defined, feature of a functi
 ##  Documentation
 Include your travis badge at the top of your `README.md` file
 In your `README.md`, describe the exported values of each module you have defined. Every function description should include it's airty (expected number of parameters), the expected data for each parameter (data-type and limitations), and it's behavior (for both valid and invalid use). Feel free to add any additional information in your `README.md` that you would like.
+
+* I exported the List.js as module to use in my Index.js and for the List.test.js as well. The List.js has the following methods:
+* Push() - This method takes in 1 argument and appends a new value to our list.
+* Pop() - This method takes no argumments and removes the last element in our list.
+* ForEach() - This method takes 1 callback argument nd goes through each element in the list, much like a for loop. For this method the user is expected to pass in a callback in order to use the current element in the list.
+* Map() - This method takes 1 callback argument and goes through each element in the list. For this method the user is expected to pass in a callback in order to use the current element in the list.
+* Reduce() - This method takes 2 arguments, a callabck and the sum and goes through each element and accumulates each element into 1. For this method the user is expected to pass in a callback and the current Sum in order to use current element in the list as well as the sum for each pass through the loop.
+
+[![Build Status](https://travis-ci.com/OviParasca/02-tools-and-context.svg?branch=master)](https://travis-ci.com/OviParasca/02-tools-and-context)
